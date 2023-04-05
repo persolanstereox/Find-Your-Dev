@@ -1,0 +1,10 @@
+.app {
+  width: 50em;
+  height: 40rem;
+  border: solid 1px red;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  
+}
