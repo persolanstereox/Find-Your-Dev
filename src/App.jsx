@@ -3,6 +3,7 @@ import Header from "./components/Header";
 import Container from "./components/UI/Container";
 import SearchBar from "./components/SearchBar";
 import UserInfo from "./components/UserInfo";
+import UserStats from "./components/UserStats";
 import styles from "./app.module.css";
 
 function App() {
@@ -16,7 +17,10 @@ function App() {
       <main className={styles.app}>
         <Header theme={theme} themeHandler={themeHandler} />
         <SearchBar/>
+        <div className={styles.info_container}>
         <UserInfo/>
+        <UserStats/>
+        </div>
       </main>
     </Container>
   );
