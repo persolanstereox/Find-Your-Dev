@@ -12,14 +12,14 @@
 header h1 {
   font-size: 2rem;
   color: white;
-  font-family: "Source Code Pro", monospace;
+  
 }
 
-img {
+header img {
   width: 2rem;
 }
 header span {
-  font-family: "Source Code Pro", monospace;
+  
   font-weight: 600;
   font-size: 1.2rem;
   color: white;

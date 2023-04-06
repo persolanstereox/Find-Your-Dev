@@ -6,5 +6,14 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  font-family: "Source Code Pro", monospace;
   
+}
+.info_container {
+  width: 100%;
+    height: 30rem;
+    background-color: cornflowerblue;
+    border-radius: 12px;
+    margin-top: 2rem;
+    padding: 3rem;
 }
