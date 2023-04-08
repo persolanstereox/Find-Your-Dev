@@ -11,3 +11,25 @@
    background-color: royalblue; 
    color: white;
 }
+.additional_info_box {
+    display: flex;
+    margin-top: 2rem;
+}
+.additional_info_box div {
+    margin-right: 1rem;
+}
+.info_and_icon_box {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+    
+}
+.info_and_icon_box img {
+    margin-right: .5rem;
+}
+.info_and_icon_box span, a {
+    color: black;
+}
+a {
+    text-decoration: none;
+}

@@ -5,8 +5,10 @@ import SearchBar from "./components/SearchBar";
 import UserInfo from "./components/UserInfo";
 import UserStats from "./components/UserStats";
 import styles from "./app.module.css";
+import {TOKEN} from './config.js'
 
 function App() {
+  console.log(TOKEN)
   const [theme, setTheme] = useState("DARK");
 
   const themeHandler = () => {

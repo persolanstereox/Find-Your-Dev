@@ -1,3 +1,7 @@
+import InfoBadge from "../components/UI/InfoBadge";
+import linkIcon from "/link.png";
+import mapMarkerIcon from "/map.png";
+import twitterIcon from "/twitter.png";
 import styles from "../assets/css/userstats.module.css";
 
 const UserStats = (props) => {
@@ -17,26 +21,29 @@ const UserStats = (props) => {
           <h2>9</h2>
         </div>
       </div>
-      <div>
+      <div className={styles.additional_info_box}>
         <div>
-          <div>
-            <img src="" alt="Accomodation Icon" />
-            <span>San Francisco</span>
-          </div>
-          <div>
-            <img src="" alt="" />
+          <InfoBadge
+            styles={styles.info_and_icon_box}
+            imgSrc={mapMarkerIcon}
+            span={"San Francisco"}
+          />
+          <div className={styles.info_and_icon_box}>
+            <img src={linkIcon} alt="Link Icon" />
             <a href="#">https:///gmgmmgmg.com</a>
           </div>
         </div>
         <div>
-          <div>
-            <img src="" alt="Twitter Icon" />
-            <span>Not available</span>
-          </div>
-          <div>
-            <img src="" alt="" />
-            <span></span>
-          </div>
+          <InfoBadge
+            styles={styles.info_and_icon_box}
+            imgSrc={twitterIcon}
+            span={"Not available"}
+          />
+          <InfoBadge
+            styles={styles.info_and_icon_box}
+            imgSrc={twitterIcon}
+            span={"@github"}
+          />
         </div>
       </div>
     </section>
