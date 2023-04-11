@@ -14,11 +14,10 @@ function App() {
   // console.log(data)
   const [theme, setTheme] = useState("DARK");
   const [username, setUsername] = useState('')
-  const [data, isLoading, error] = useFetch(URL + username);
+  const [data, isLoading, error] = useFetch(URL);
 
 
   const getUserData = () => {
-    
     const user = data
     console.log(user)
   }
