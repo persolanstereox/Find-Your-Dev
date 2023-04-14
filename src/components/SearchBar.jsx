@@ -9,8 +9,7 @@ import { useState } from "react";
 const SearchBar = (props) => {
 
   const usernameHandler = (e) => {
-    props.setUsername(e.target.value)
-    console.log(e.target.value)
+    
     let validUrl = URL + e.target.value
     props.setUrl(validUrl)
     console.log(validUrl)
@@ -27,7 +26,7 @@ const SearchBar = (props) => {
           id="github-user"
           aria-label="Password"
           placeholder=" "
-          value={props.username}
+          // value={props.username}
           
           onChange={usernameHandler}
         />
