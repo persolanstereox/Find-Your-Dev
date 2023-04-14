@@ -1,6 +1,7 @@
 import Button from "./UI/Button";
 import styles from "../assets/css/searchbar.module.css";
 import searchicon from "/SearchIcon.png";
+import { URL } from "../config.js";
 import { useState } from "react";
 
 
@@ -10,6 +11,9 @@ const SearchBar = (props) => {
   const usernameHandler = (e) => {
     props.setUsername(e.target.value)
     console.log(e.target.value)
+    let validUrl = URL + e.target.value
+    props.setUrl(validUrl)
+    console.log(validUrl)
   }
 
   return (
@@ -23,6 +27,7 @@ const SearchBar = (props) => {
           id="github-user"
           aria-label="Password"
           placeholder=" "
+          value={props.username}
           
           onChange={usernameHandler}
         />

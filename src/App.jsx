@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import axios from "axios";
 import Header from "./components/Header";
 import Container from "./components/UI/Container";
 import SearchBar from "./components/SearchBar";
@@ -43,27 +44,39 @@ function App() {
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(null);
 
-  async function fetchData() {
+  // async function fetchData() {
     
-    setIsLoading(true);
-    try {
-      setUrl(URL + username);
+  //   setIsLoading(true);
+  //   try {
+  //     setUrl(URL + username);
       
-      const response = await fetch(url);
+  //     const response = await fetch(url);
 
-      if (!response.ok) {
-        throw new Error("Request failed");
-      }
-      const json = await response.json();
-      setData(json);
-      console.log(data);
-    } catch (error) {
-      setError(error.message || "Something went wrong!");
-    }
-    setIsLoading(false);
-  }
+  //     if (!response.ok) {
+  //       throw new Error("Request failed");
+  //     }
+  //     const json = await response.json();
+  //     setData(json);
+  //     console.log(data);
+  //   } catch (error) {
+  //     setError(error.message || "Something went wrong!");
+  //   }
+  //   setIsLoading(false);
+  // }
 
   // return { data, isLoading, error, fetchData, refetchData};
+
+  
+  async function fetchData() {
+    setUrl(URL + username)
+    try {
+      
+      const response = await axios.get(url);
+      console.log(response.data);
+    } catch (error) {
+      console.error(error);
+    }
+  }
 
   const themeHandler = () => {
     setTheme((curr) => (curr === "DARK" ? "LIGHT" : "DARK"));
@@ -72,7 +85,7 @@ function App() {
     <Container>
       <main className={styles.app}>
         <Header theme={theme} themeHandler={themeHandler} />
-        <SearchBar getUser={fetchData} setUsername={setUsername} />
+        <SearchBar getUser={fetchData} setUsername={setUsername} value={username} setUrl={setUrl} />
         <div className={styles.info_container}>
           {error && <h2>error</h2>}
           {isLoading && <h2>Loading...</h2>}
