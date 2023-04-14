@@ -21,6 +21,7 @@ function App() {
       
       const response = await axios.get(url);
       console.log(response.data);
+      ///test
     } catch (error) {
       setError(error.message || "Something went wrong!");
       console.error(error);
