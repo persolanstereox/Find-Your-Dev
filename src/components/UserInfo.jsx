@@ -1,19 +1,30 @@
 import styles from "../assets/css/userinfo.module.css";
-import profilePhoto from "/idphoto.png";
 
 const UserInfo = (props) => {
+  const userdata = props.userData;
+
+  const joinedDate = new Date(userdata.joined);
+  const dataOptions = {
+    day: "numeric",
+    month: "short",
+    year: "numeric",
+  };
+  const formattedDate = Intl.DateTimeFormat("en-US", dataOptions).format(
+    joinedDate
+  );
+
   return (
     <section className={styles.user_info_container}>
       <div className={styles.img_container}>
-        <img src={profilePhoto} alt="Profile Photo" />
+        <img src={userdata.avatar} alt="Profile Photo" />
       </div>
       <div>
-        <h1>The Github User</h1>
-        <span>@bombaclan</span>
+        <h1>{userdata.name || "Name not available"}</h1>
+        <a href={userdata.github_url}>@{userdata.username}</a>
       </div>
-      <h3 className={styles.joined_date}>Joined 25 Jan 2021</h3>
+      <h3 className={styles.joined_date}>Joined {formattedDate}</h3>
       <div className={styles.bio_container}>
-        <h5>This profile has no bio</h5>
+        <h5>{userdata.bio || "This profile has no bio"}</h5>
       </div>
     </section>
   );

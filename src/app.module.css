@@ -1,7 +1,7 @@
 .app {
   width: 50em;
   height: 40rem;
-  border: solid 1px red;
+  
   position: absolute;
   top: 50%;
   left: 50%;
@@ -9,7 +9,7 @@
   font-family: "Source Code Pro", monospace;
   
 }
-.info_container {
+.received_data_container {
   width: 100%;
     height: 30rem;
     background-color: cornflowerblue;
