@@ -24,10 +24,8 @@ const SearchBar = (props) => {
         <input
           type="text"
           id="github-user"
-          aria-label="Password"
+          aria-label="Github Username"
           placeholder=" "
-          // value={props.username}
-          
           onChange={usernameHandler}
         />
         <label htmlFor="github-user">Search github username...</label>

@@ -2,13 +2,15 @@ import styles from "../assets/css/userinfo.module.css";
 
 const UserInfo = (props) => {
   const userdata = props.userData;
+
+  const joinedDate = new Date(userdata.joined);
   const dataOptions = {
     day: "numeric",
-    month: "short", 
+    month: "short",
     year: "numeric",
   };
   const formattedDate = Intl.DateTimeFormat("en-US", dataOptions).format(
-    userdata.joined_date
+    joinedDate
   );
 
   return (
