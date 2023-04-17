@@ -18,7 +18,7 @@ const UserInfo = (props) => {
       <div className={styles.img_container}>
         <img src={userdata.avatar} alt="Profile Photo" />
       </div>
-      <div>
+      <div className={styles.name}>
         <h1>{userdata.name || "Name not available"}</h1>
         <a href={userdata.github_url}>@{userdata.username}</a>
       </div>

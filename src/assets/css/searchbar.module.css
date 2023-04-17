@@ -60,3 +60,25 @@ opacity: 0;
     cursor: pointer;
     
 }
+
+
+
+@media only screen and (max-width: 850px) {
+    input {
+        width: 21rem;
+    }
+    label {
+        font-size: 1.2rem;
+    }
+    input:focus + label,
+    input:not(:placeholder-shown) + label {
+    left: 100px;
+    opacity: 0;
+    }
+  }
+
+  @media only screen and (max-width: 590px) {
+    input {
+        width: 90%;
+    }
+  }

@@ -16,12 +16,33 @@
   height: 100%;
   border-radius: 50%;
 }
-.user_info_container h1, h3, h5 {
-    color: white;
+.user_info_container h1,
+h3,
+h5 {
+  color: white;
 }
-.user_info_container h3, h5 {
-    font-weight: 300;
+.user_info_container h3,
+h5 {
+  font-weight: 300;
 }
 .user_info_container span {
-    color: darkblue;
+  color: darkblue;
+}
+
+@media only screen and (max-width: 850px) {
+  .user_info_container {
+    grid-template-columns: [first] 25% [line2] 5% [line3] auto [end];
+    grid-template-rows: [row1] 4rem [row2] 4rem [row3] 1rem [row3] 2rem [end]
+  }
+  .bio_container {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 4;
+    /* grid-row-end: 4; */
+    
+  }
+  .name, h3 {
+    grid-column-start: 3;
+    grid-column-end: 4;
+  }
 }

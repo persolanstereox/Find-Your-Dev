@@ -17,3 +17,19 @@
     margin-top: 2rem;
     padding: 3rem;
 }
+
+@media only screen and (max-width: 840px) {
+  .app {
+    width: 35rem;
+    /* height: 80%; */
+  }
+  .received_data_container {
+    /* padding: 0; */
+  }
+}
+@media only screen and (max-width: 590px) {
+  .app {
+    width: 95%;
+    padding: 2rem;
+  }
+}
